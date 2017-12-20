@@ -9,10 +9,12 @@ def on_model(model):
 	mod = str(model)
 	k = mod.find('maxScores(')
 	z = mod.find('winner(')
+	print('hello')
+	print(mod)
 	play_col = int(mod[k + len('maxScores(')])
 	if z > 0:
 		winner = int(mod[z + len('winner(')])
-	print(winner)
+
 def printBoard(board):
 	for i in range(5, -1, -1):
 		print(board[i])
