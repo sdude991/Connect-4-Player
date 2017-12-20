@@ -58,15 +58,10 @@ dirCount(X,Y,C,Dx,Dy,Val):-
 
 dirCount(X,Y,C,Dx,Dy,Val):-
 	chip(C),
+	K != C,
 	d(Dx,Dy),
 	board(X,Y,K),
-	K != C,
 	Val = 0.
-%dirCount(X,Y,Dx,Dy,Val):-
-%	chip(C),
-%	d(Dx,Dy),
-%	board(X,Y,1),
-%	Val = 0.
 
 score(X,V):-
 	topColumn(X,Y),
@@ -110,6 +105,5 @@ winner(C):-
 	V >= 4.
 
 
-%#show score/2.
 #show maxScores/1.
 #show winner/1.
